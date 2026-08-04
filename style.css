@@ -53,3 +53,16 @@ img{
     font-weight: bold;
     font-size: 3rem;
 }
+
+.msg-container{
+    margin-top: 5rem;
+}
+
+#msg{
+    font-size: 2rem;
+    background-color: #081b31;
+    color: white;
+    display: inline;
+    border-radius: 1rem;
+    padding: 10px;
+}
