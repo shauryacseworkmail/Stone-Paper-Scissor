@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    background-color: #081b31;
+    color: white;
+    padding: 20px;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+}
+.choice{
+    height: 150px;
+    width: 150px;
+}
+
+img:hover{
+    cursor: pointer;
+    border: 3px solid #081b31;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
