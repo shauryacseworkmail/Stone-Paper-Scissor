@@ -39,3 +39,17 @@ img{
     border-radius: 50%;
     object-fit: cover;
 }
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+#player-score, #computer-score{
+    font-weight: bold;
+    font-size: 3rem;
+}
