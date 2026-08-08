@@ -2,7 +2,7 @@ let userscore = 0;
 let computerscore = 0;
 
 const choices = document.querySelectorAll(".choice");
-
+const msg = document.querySelector("#msg");
 const getComputerChoice = () => {
     const options = ["stone", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * options.length);
@@ -10,22 +10,23 @@ const getComputerChoice = () => {
 }
 
 const playgame = (userChoice) => {
-    console.log("choice was clicked:", userChoice);
+
     const computerChoice = getComputerChoice();
-    console.log("computer choice:", computerChoice);
 
     if(userChoice === computerChoice) {
-        console.log("It's a tie!");
+        msg.textContent = "It's a tie!";
+        msg.style.backgroundColor = "blue";
     }
     else{
         if((userChoice === "stone" && computerChoice === "scissors") ||
            (userChoice === "paper" && computerChoice === "stone") ||
            (userChoice === "scissors" && computerChoice === "paper")) {
-            console.log("You win!");
-            
+            msg.textContent = `You win! Your ${userChoice} beats ${computerChoice}`;
+            msg.style.backgroundColor = "green";
+
         } else {
-            console.log("Computer wins!");
-            
+            msg.textContent = `Computer wins! The ${computerChoice} beats your ${userChoice}`;
+            msg.style.backgroundColor = "red";
         }
     }
     
