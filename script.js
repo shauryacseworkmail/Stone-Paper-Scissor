@@ -1,8 +1,11 @@
-let userscore = 0;
-let computerscore = 0;
+let userScore = 0;
+let computerScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
+const userScoreDisplay = document.querySelector("#player-score");
+const computerScoreDisplay = document.querySelector("#computer-score");
+
 const getComputerChoice = () => {
     const options = ["stone", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * options.length);
@@ -23,10 +26,14 @@ const playgame = (userChoice) => {
            (userChoice === "scissors" && computerChoice === "paper")) {
             msg.textContent = `You win! Your ${userChoice} beats ${computerChoice}`;
             msg.style.backgroundColor = "green";
+            userScore++;
+            userScoreDisplay.innerText = userScore;
 
         } else {
             msg.textContent = `Computer wins! The ${computerChoice} beats your ${userChoice}`;
             msg.style.backgroundColor = "red";
+            computerScore++;
+            computerScoreDisplay.innerText = computerScore;
         }
     }
     
